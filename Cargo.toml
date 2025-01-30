@@ -1,0 +1,20 @@
+[package]
+authors = ["Defi-Wonderland"]
+name = "rust-template"
+description = "Generate a Rust template repo"
+homepage = "https://github.com/defi-wonderland/rust-template"
+version = "1.0.0"
+edition = "2021"
+repository = "https://github.com/defi-wonderland/rust-template"
+license = "MIT"
+readme = "readme.MD"
+keywords = [] # Max 5
+categories = ["command-line-utilities"]
+
+[lib]
+name = "template"
+path = "src/lib.rs"
+
+[[bin]]
+name = "template"
+path = "src/main.rs"
