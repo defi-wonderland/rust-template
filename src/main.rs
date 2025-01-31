@@ -1,10 +1,7 @@
-
 fn main() {
     println!("Hello, ");
     template::my_fn();
 }
-
-
 
 #[cfg(test)]
 mod tests {
