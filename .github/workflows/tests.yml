@@ -1,5 +1,8 @@
 name: tests
 
+permissions:
+  contents: read
+
 on:
   pull_request:
     branches:
@@ -94,10 +97,13 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v4
+      # - uses: actions/checkout@v4
 
       - name: Cache cargo output
         uses: Swatinem/rust-cache@v2
+
+      - name: Install toolchain
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@cargo-llvm-cov
