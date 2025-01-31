@@ -2,7 +2,7 @@ name: tests
 
 permissions:
   contents: read
-
+q
 on:
   pull_request:
     branches:
@@ -102,8 +102,8 @@ jobs:
       - name: Cache cargo output
         uses: Swatinem/rust-cache@v2
 
-      - name: Install toolchain
-        uses: dtolnay/rust-toolchain@stable
+      # - name: Install toolchain
+      #   uses: dtolnay/rust-toolchain@stable
 
       - name: Install cargo-llvm-cov
         uses: taiki-e/install-action@cargo-llvm-cov
