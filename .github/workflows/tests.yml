@@ -94,10 +94,11 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions:
+      contents: write
       pull-requests: write
 
     steps:
-      # - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Cache cargo output
         uses: Swatinem/rust-cache@v2
@@ -129,3 +130,6 @@ jobs:
             ```
             ${{ steps.codecov.outputs.new_cov_comment }}
             ```
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
