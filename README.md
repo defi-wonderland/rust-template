@@ -1,4 +1,5 @@
 # rust-template
+Made with ♥ by Wonderland (https://defi.sucks)
 
 ## CI & deployment
 
