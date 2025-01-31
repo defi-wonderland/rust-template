@@ -19,7 +19,10 @@ This repo follows the standard Wonderland repo structure:
 
 The CI will deploy on both crates.io and as a github release all push on main which
 are tagged with a valid semver preceded by `v` (`git tag -a vX.Y.Z -m "Release X.Y.Z"` then `git push vX.Y.Z` on dev).
-This deployment needs an env secret `CRATES_API_TOKEN` to be set in the repo settings as well as a "prod" environement, 
-with a protection rule on the branch `main` and on the `v*.*.*` pattern tag.
+This deployment needs an env secret `CRATES_API_TOKEN` to be set in the repo settings as well as a "prod" environement (case sensitive),  with a protection rule on the branch `main` and on the `v*.*.*` pattern tag.
 
 ![image](https://github.com/user-attachments/assets/72e63e2e-10f2-40cf-a9ae-db7ad5bc2b74)
+
+## Suggestions
+
+- Run clippy on the whole codebase using: `cargo clippy --all-targets --all-features -- -D warnings` (CI is doing this by default)
