@@ -13,10 +13,7 @@ This repo includes the following CI:
 
 - cargo audit (checking for imported crates with known vulnerabilities)
 
-This repo follows the standard Wonderland repo structure:
-- feat, fix and test branches, which are merged into dev once feature comlete
-- dev contains all the active development code which has matured
-- main contains all the released versions
+This repo follows [trunk based development](https://trunkbaseddevelopment.com/), where `main` contains all the released versions, using tags to trigger deployments.
 
 The CI will deploy on both crates.io and as a github release all push on main which
 are tagged with a valid semver preceded by `v` (`git tag -a vX.Y.Z -m "Release X.Y.Z"` then `git push vX.Y.Z` on dev).
